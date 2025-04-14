@@ -1051,6 +1051,42 @@ header .bottom a {
     }
 }
 
+@media (max-width: 420px) {
+    footer{
+        height: auto; /* Allow footer to adjust based on content */
+        /* Add some padding for better spacing */
+    
+        }
+    .top-footer-section {
+        
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px; /* smaller margin */
+        padding: 0;
+        gap: 10px; /* add some spacing between items */
+    }
+
+    .middle-footer-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1px;
+        text-align: center;
+    }
+
+    .bottom-footer-section {
+        margin: 10px;
+        text-align: center;
+    }
+
+    .top-footer-section h2, 
+    .middle-footer-section h2, 
+    .bottom-footer-section h2 {
+        font-size: 1.4rem; /* slightly smaller heading if you want */
+    }
+}
+
 
 </style>
 
