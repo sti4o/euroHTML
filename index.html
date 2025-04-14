@@ -140,6 +140,9 @@
             
 
             <div class = "featured-car">
+                <div class="featured-car-image">
+                    <img src="car.jpg" alt="featured car">
+                </div>
                 <div class = "text-gradiant"></div>
 
                 <div class = "featured-text-content">
@@ -336,19 +339,29 @@
     }
 
     .featured-car {
-        position: relative;
-        border: 2px solid #000;
-        width: 600px; /* or 100% if you want */
-        height: 300px;
-        margin: 20px auto;
-        box-shadow: 0px 0px 5px #000000;
-        border-radius: 21px;
-        overflow: hidden; /* This is important to prevent overflow */
-        background-image: url('car.jpg');
-        background-size: cover; /* <== SUPER IMPORTANT */
-        background-position: center; /* <== Also important */
-        background-repeat: no-repeat; /* prevents ugly repeats */
-    }
+    position: relative;
+    width: 600px; /* or 90% */
+    height: 400px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 5px #000000;
+    border-radius: 21px;
+    overflow: hidden;
+    background: #000; /* fallback color if needed */
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-car-image {
+    width: 100%;
+    height: 100%; /* default full height */
+    overflow: hidden;
+}
+
+.featured-car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* makes sure it nicely fits */
+}
 
     .text-gradiant{
         position: absolute;
@@ -867,7 +880,6 @@ header .bottom a {
 @media (max-width: 420px) {
     .page{
         width: 100vw;
-        border: 2px solid red;
     }
     
    
@@ -1003,8 +1015,12 @@ header .bottom a {
     }
     .featured-car {
         width: 90%;
-        height: 400px;
-        background-position: top; /* <<< THIS is the magic */
+        height: 340px; /* taller to fit image + text nicely */
+        background-color: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), #7195B5;
+    }
+
+    .featured-car-image {
+        height: 50%; /* only take 40% of the featured-car's height */
     }
 
     .text-gradiant {
@@ -1043,6 +1059,12 @@ header .bottom a {
         padding: 8px 16px;
     }
 
+    .view-featured {
+        width: 50%;
+        height: 40px;
+        margin: 20px auto;
+        font-size: 1.2rem;
+    }
 
 
 
